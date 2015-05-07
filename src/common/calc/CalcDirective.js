@@ -145,6 +145,10 @@
           return false;
         };
 
+        //XAJA|flash animation clear
+        $('.change-flash').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $('.change-flash').removeClass('flash')
+        });
         scope.updateWageIncrease = function() {
           scope.wageIncrease = Math.pow(scope.inputData.wageAtRetire / scope.inputData.wageAtHire, 1 / (scope.inputData.ageAtRetire - scope.inputData.ageAtHire - 1)) - 1;
         };
@@ -152,6 +156,8 @@
         scope.$watch('inputData', function(newValue, oldValue) {
           scope.updateWageIncrease();
           scope.calculateOutput();
+          //XAJA|flash animation clear
+          $('.change-flash').addClass('animated flash');
         }, true);
 
 

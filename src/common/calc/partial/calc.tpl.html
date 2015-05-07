@@ -32,30 +32,36 @@
                     </div>
                 </div>
                 <div ng-show="modeSelected.key == 'dc' || modeSelected.key == 'reduction'">
-                    <div class="field-label">Pension Income Replacement</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: {{lifeOnly}}%;">
-                        {{lifeOnly | number:2}}%
+                    <div class="animated fadeInDown">
+                        <div class="field-label change-flash">Pension Income Replacement</div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: {{lifeOnly}}%;">
+                            {{lifeOnly | number:2}}%
+                            </div>
                         </div>
                     </div>
-                    <div class="field-label  animated fadeInDown" ng-show="inputData.survivor > 0">Pension Income Replacement w/ Survivor</div>
-                    <div class="progress animated fadeInDown" ng-show="inputData.survivor > 0">
-                        <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: {{jointOutput}}%;">
-                        {{jointOutput | number:2}}%
+                    <div class="animated fadeInDown" ng-show="inputData.survivor > 0">
+                        <div class="field-label change-flash">Pension Income Replacement w/ Survivor</div>
+                        <div class="progress animated">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: {{jointOutput}}%;">
+                            {{jointOutput | number:2}}%
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div ng-show="modeSelected.key == 'reduction'">
-                    <div class="field-label">Difference 401k vs Pension</div>
+                    <div class="field-label change-flash">Difference 401k vs Pension</div>
                     <div class="progress">
                         <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="barStyle">
                             {{reductionOutput | absolute | number:2}}%
                         </div>
                     </div>
-                    <div class="field-label  animated fadeInDown" ng-show="inputData.survivor > 0">Difference 401k vs Pension w/ Survivor %</div>
-                    <div class="progress animated fadeInDown" ng-show="inputData.survivor > 0">
-                        <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="jointStyle">
-                        {{reductionJointOutput | absolute | number:2}}%
+                    <div class="animated fadeInDown" ng-show="inputData.survivor > 0">
+                        <div class="field-label change-flash">Difference 401k vs Pension w/ Survivor %</div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="jointStyle">
+                            {{reductionJointOutput | absolute | number:2}}%
+                            </div>
                         </div>
                     </div>
                 </div>
