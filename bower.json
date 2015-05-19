@@ -11,7 +11,9 @@
     "font-awesome": "4.3.0",
     "animate.css": "3.2.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular-mask": "~3.0.12"
+  },
   "resolutions": {
     "angular": "~1.3"
   }
